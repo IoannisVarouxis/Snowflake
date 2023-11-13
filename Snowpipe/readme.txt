@@ -14,7 +14,7 @@ Step 2: Generate a Public Key
     openssl rsa -in rsa_key.p8 -pubout -out rsa_key.pub
     
 Step 4: Assign the Public Key to a Snowflake User
-    CREATE USER SNOWPIPE_USER PASSWORD='<user_pwd>' DEFAULT_ROLE = DEPLOYMENT_PLUTO_DB_PRD DEFAULT_SECONDARY_ROLES = ('ALL') MUST_CHANGE_PASSWORD = FALSE;
+    CREATE USER SNOWPIPE_USER PASSWORD='<user_pwd>' DEFAULT_ROLE = DEPLOYMENT_DB_PRD DEFAULT_SECONDARY_ROLES = ('ALL') MUST_CHANGE_PASSWORD = FALSE;
     ALTER USER SNOWPIPE_USER SET RSA_PUBLIC_KEY='<public_key - rsa_key.pub>';
 
 
